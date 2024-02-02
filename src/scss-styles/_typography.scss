@@ -1,0 +1,7 @@
+@import "./mixins";
+@import "./global";
+
+h1 {
+    @include font-size(50px, 38px);
+    font-weight: 300;
+}

@@ -1,0 +1,18 @@
+@import "../../scss-styles/mixins";
+
+.heroContainer {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-image: url("../../assets/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1600/500;
+  padding: 70px 40px;
+
+  .heroHeading {
+    @include font-size(55px, 42px);
+    margin: 0;
+    color: #fff;
+  }
+}

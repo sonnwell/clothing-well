@@ -5,7 +5,7 @@ import "./Directory.scss";
 function Directory({ categories }) {
   return (
     <div className="container">
-      <div className="directory-container mt-5">
+      <div className="directory-container">
         {categories.map((category) => {
           return <CategoryItem key={category.id} category={category} />;
         })}

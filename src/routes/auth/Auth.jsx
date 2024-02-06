@@ -1,10 +1,10 @@
-import React from 'react'
-import SignIn from '../../components/sign-in-form/SignIn'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import SignIn from "../../components/sign-in-form/SignIn";
+import SignUp from "../../components/sign-up-form/SignUp";
 
-function Auth() {
-  return (
-    <SignIn />
-  )
-}
+const Auth = () => {
+  return <SignIn />;
+};
 
-export default Auth
+export default Auth;

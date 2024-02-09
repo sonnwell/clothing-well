@@ -4,14 +4,14 @@ import SiteLogo from "../../assets/company-logo.png";
 import userIcon from "../../assets/user-solid.png";
 import cart from "../../assets/cart-shopping.png";
 
-import { UserContext } from "../../contexts/user.context";
+import { UserContext } from "../../contexts/User.Context";
 import { signOutUser } from "../../utils/firebase.utils";
 
 import "./Navigation.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  console.log(currentUser)
+  console.log(currentUser);
 
   return (
     <div className="container">
@@ -35,12 +35,7 @@ const Navigation = () => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="navLink" to="/shop">
-                  Mens
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="navLink" to="/shop">
-                  Womens
+                  Shop
                 </Link>
               </li>
               <li className="nav-item">

@@ -1,10 +1,12 @@
 import { useState } from "react";
 import FormInput from "../form-input/FormInput";
 import Button from "../button/Button";
-import SignUp from "../sign-up-form/SignUp";
 import { Link } from "react-router-dom";
 
-import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase.utils";
+import {
+  signInAuthUserWithEmailAndPassword,
+  signInWithGooglePopup,
+} from "../../utils/firebase.utils";
 import "./SignIn.scss";
 
 const defaultFormFields = {
@@ -18,6 +20,10 @@ function SignIn() {
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
+  };
+
+  const signInWithGoogle = async () => {
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (e) => {
@@ -73,6 +79,13 @@ function SignIn() {
           />
           <Link to="/auth/sign-up">Create an account.</Link>
           <Button type="submit">Submit</Button>
+          <Button
+            type="button"
+            buttonType="inverted"
+            onClick={signInWithGoogle}
+          >
+            Sign in with Google
+          </Button>
         </form>
       </div>
     </div>

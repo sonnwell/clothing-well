@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import SiteLogo from "../../assets/company-logo.png";
-import userIcon from "../../assets/user-solid.png";
-import cart from "../../assets/cart-shopping.png";
+import CartIcon from "../../components/cart-icon/CartIcon";
+import CartDropdown from "../../components/cart-dropdown/CartDropdown";
 
 import { UserContext } from "../../contexts/User.Context";
+import { CartContext } from "../../contexts/Cart.Context";
 import { signOutUser } from "../../utils/firebase.utils";
 
 import "./Navigation.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
   console.log(currentUser);
 
   return (
@@ -40,16 +42,7 @@ const Navigation = () => {
               </li>
               <li className="nav-item">
                 <Link className="navLink" to="/shop">
-                  Sale
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav" id="iconWrapper">
-              <li className="nav-item">
-                <Link className="navLinkIcon" to="/shop">
-                  <img src={cart} alt="" className="navIcon" />
+                  Cart
                 </Link>
               </li>
               <li className="nav-item">
@@ -63,7 +56,11 @@ const Navigation = () => {
                   </Link>
                 )}
               </li>
+              <li className="nav-item">
+                <CartIcon />
+              </li>
             </ul>
+            {isCartOpen && <CartDropdown />}
           </div>
         </div>
       </nav>

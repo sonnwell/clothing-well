@@ -11,13 +11,17 @@ import {
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
+const apiKey = import.meta.env.VITE_API_KEY_FIREBASE_KEY;
+const appId = import.meta.env.VITE_API_KEY_FIREBASE_APP_ID;
+const senderId = import.meta.env.VITE_API_KEY_SENDER_ID;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAsfgaVhk5pCdZbCKHsF7l33EZKZG91MTI",
+  apiKey: apiKey,
   authDomain: "clothing-well.firebaseapp.com",
   projectId: "clothing-well",
   storageBucket: "clothing-well.appspot.com",
-  messagingSenderId: "992069149604",
-  appId: "1:992069149604:web:dd614757e5754072aa5731",
+  messagingSenderId: senderId,
+  appId: appId,
 };
 
 const firebaseApp = initializeApp(firebaseConfig);

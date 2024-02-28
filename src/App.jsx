@@ -3,6 +3,7 @@ import Shop from "./routes/shop/Shop";
 import Navigation from "./routes/navigation/Navigation";
 import SignIn from "./routes/auth/Auth";
 import SignUp from "./components/sign-up-form/SignUp";
+import Checkout from "./routes/checkout/Checkout";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="shop" element={<Shop />}/>
         <Route path="auth" element={<SignIn />}/>
         <Route path="auth/sign-up" element={<SignUp />}/>
+        <Route path="/checkout" element={<Checkout />}/>
       </Route>
     </Routes>
   )

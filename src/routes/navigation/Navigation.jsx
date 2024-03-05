@@ -4,8 +4,8 @@ import SiteLogo from "../../assets/company-logo.png";
 import CartIcon from "../../components/cart-icon/CartIcon";
 import CartDropdown from "../../components/cart-dropdown/CartDropdown";
 
-import { UserContext } from "../../contexts/User.Context";
-import { CartContext } from "../../contexts/Cart.Context";
+import { UserContext } from "../../contexts/user.context";
+import { CartContext } from "../../contexts/cart.context";
 import { signOutUser } from "../../utils/firebase.utils";
 
 import "./Navigation.scss";

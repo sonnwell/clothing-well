@@ -13,7 +13,6 @@ import "./Navigation.scss";
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
-  console.log(currentUser);
 
   return (
     <div className="container">

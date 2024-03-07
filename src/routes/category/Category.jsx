@@ -15,7 +15,7 @@ const Category = () => {
   }, [category, categoriesMap]);
   return (
     <>
-      <h2 className="text-uppercase mt-5 mb-3">{category}</h2>
+      <h2 className="text-uppercase mt-5 mb-3 fw-bold">{category}</h2>
       <div className="category-container">
         {products &&
           products.map((product) => (
